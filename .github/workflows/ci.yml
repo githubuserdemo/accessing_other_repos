@@ -6,6 +6,12 @@ on:
     branches: [ main ]
   workflow_dispatch:
 jobs:
+  access:
+    uses: githubuserdemo/hello-world-composite-run-steps-action/.github/workflows/terraform.yml@main
+    with:
+      username: mona
+    secrets:
+      TOKEN: ${{ secrets.GITHUB_TOKEN }}
   build:
     runs-on: ubuntu-latest
     steps:
