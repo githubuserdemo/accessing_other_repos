@@ -15,6 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: githubuserdemo/hello-world-composite-run-steps-action@main
       - uses: actions/checkout@v2
         with:
           repository: githubuserdemo/hello-world-composite-run-steps-action
